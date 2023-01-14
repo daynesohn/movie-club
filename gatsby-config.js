@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
@@ -10,8 +14,30 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "CFPAT-vVvIcstNeLENewy_QqJGM1dvHkfY692VnozpU1iKd5E",
-        spaceId: "ut982uw7xga0",
+        accessToken: `${process.env.CONTENTFUL_TOKEN}`,
+        spaceId: `${process.env.CONTENTFUL_SPACEID}`,
+      },
+    },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sass`,
+    `react-feather`,
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        web: [
+          {
+            name: `Barlow`,
+            file: `https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap`
+          },
+          {
+            name: `Righteous`,
+            file: `https://fonts.googleapis.com/css2?family=Righteous&display=swap`
+          },
+        ],
       },
     },
   ],

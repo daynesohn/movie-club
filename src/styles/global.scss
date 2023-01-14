@@ -1,0 +1,81 @@
+$primary-text: #012351;
+$bg: #f2b305;
+$headings: #184879;
+$headings-shadow: #daddce;
+$white: #fff;
+
+html {
+  font-size: 16px;
+  font-family: "Barlow", sans-serif;
+}
+
+body {
+  background: $bg;
+  color: $primary-text;
+  height: 100vh;
+}
+
+h1, h2, h3 {
+  color: $headings;
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  h1 {
+    font-size: 6rem;
+    font-family: "Righteous", cursive;
+    text-shadow: 2.5px 2.5px $bg, 5px 5px #000, 7.5px 7.5px $headings-shadow;
+    margin: 2rem 0;
+    text-align: center;
+  }
+}
+
+.auth-section {
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    margin: 0 2rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    background: $headings-shadow;
+    border: 3px solid $headings;
+    color: $primary-text;
+    justify-content: center;
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 1.25rem;
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+    transition: 500ms;
+
+    &:hover {
+      background: $headings;
+      color: $bg;
+      border-color: $headings-shadow;
+      transition: 500ms;
+    }
+  }
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  text-align: center;
+}
+
+.header-ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  font-weight: 700;
+}
