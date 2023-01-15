@@ -17,10 +17,10 @@ module.exports = {
     `gatsby-plugin-sass`,
     `react-feather`,
     {
-      resolve: "gatsby-source-contentful",
+      resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `${process.env.CONTENTFUL_SPACEID}`,
-        accessToken: `${process.env.CONTENTFUL_ACCESS_TOKEN}`,
+        spaceId: process.env.CONTENTFUL_SPACEID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     {
