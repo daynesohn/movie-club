@@ -11,18 +11,18 @@ module.exports = {
     title: "movieClub",
   },
   plugins: [
-    {
-      resolve: "gatsby-source-contentful",
-      options: {
-        accessToken: `${process.env.CONTENTFUL_ACCESS_TOKEN}`,
-        spaceId: `${process.env.CONTENTFUL_SPACEID}`,
-      },
-    },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
     `react-feather`,
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        spaceId: `${process.env.CONTENTFUL_SPACEID}`,
+        accessToken: `${process.env.CONTENTFUL_ACCESS_TOKEN}`,
+      },
+    },
     {
       resolve: `gatsby-omni-font-loader`,
       options: {
